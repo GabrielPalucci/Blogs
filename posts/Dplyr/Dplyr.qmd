@@ -3,19 +3,16 @@ image: ppa.png
 page-layout: article
 title-block-banner: pp.jpg
 date: "2023-12-22"
-title: "Utilizando Dplyr | palmerpenguins"
+title: "Pensando sobre o processo de Amostragem"
 author: "Gabriel Palucci Rosa"
 toc: true
 toc-title: "Table of Content"
 categories:
-  - Penguins
   - Dplyr
-  - ggplot2
+  - ggplot
 ---
 
-# Introduction
-
-# Installing the package
+# / Adicionando Pacotes
 
 ```{r, warning=FALSE}
 
@@ -29,13 +26,20 @@ library('palmerpenguins')
 
 ```
 
+# / Visualizando Base de Dados
+
 ```{r}
+
+
 pinguim <- dplyr::as_tibble(palmerpenguins::penguins)
+rmarkdown::paged_table(pinguim)
 ```
 
-# Using Dplyr
+# / Utilizando Dplyr
 
-## Rename
+## // Rename()
+
+Podemos observar que todos nomes das classes estão em inglês, assim, vamos modifica-los utilizando utilizando **rename**
 
 ```{r}
 
@@ -48,17 +52,29 @@ pinguim <- pinguim %>%
                   Peso_g = body_mass_g,
                   Sexo = sex,
                   Ano = year)
+
+
+
+rmarkdown::paged_table(pinguim)
+
 ```
 
-## Slice
+## // Slice
+
+Utilizamos Slice para selecionar **fatia** da nossa base de dados
 
 ```{r, warning=FALSE}
 
+
 pinguim %>% 
-        slice(1:20)
+        slice(1:20) %>%
+        rmarkdown::paged_table(pinguim)
+
 ```
 
-## Select
+## // Select
+
+Utilizamos Slice para selecionar **Colunas** do nossa base de dados.
 
 ```{r paged.print=FALSE}
 
@@ -67,7 +83,9 @@ pinguim %>% dplyr::select(Especies, Ilha, Peso_g) %>%
 
 ```
 
-## Mutate
+## // Mutate
+
+Utilizando o Mutate podemos adicionar **colunas** no nosso banco de dados a partir das variáveis ja existentes.
 
 ```{r}
 
@@ -79,7 +97,7 @@ pinguim %>%
 
 ```
 
-## Filter
+## // Filter
 
 Como o nome ja diz, o **Filter** tem como princípio a filtragemn do nosso base de dados com a utilização de paramétros como:
 
@@ -102,7 +120,7 @@ pinguim %>% filter(Peso_g > 1000, Espessura_Bico_mm > 10) %>%
 
 ```
 
-## Relocate()
+## // Relocate()
 
 Utilizamos para relocar as **colunas** de posição em nossa base de dados
 
@@ -133,7 +151,7 @@ pinguim %>%
 
 ```
 
-## Group_by() / Summarise()
+## // Group_by() / Summarise()
 
 ```{r, warning=FALSE}
 
@@ -146,8 +164,8 @@ pinguim %>% group_by(Ilha, Especies) %>%
 
 ```
 
-# Referência
+#/ Referência
 
 [ ](https://github.com/allisonhorst/palmerpenguins)
 
-![](https://www.tidyverse.org/images/hex-tidyverse.png){width="15%"} ![](https://magrittr.tidyverse.org/logo.png){width="15%"} ![](https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png){width="15%"}
+![](https://www.tidyverse.org/images/hex-tidyverse.png){width="15%"}
