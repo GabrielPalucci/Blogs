@@ -1,19 +1,43 @@
 project:
   type: website
-
+  output-dir: docs
+  
 website:
-  title: "Blogs"
-  navbar:
+  title: "Gabriel Palucci Rosa"
+  page-footer:
+    left: "Website made with [Quarto](https://quarto.org/), by Gabriel Palucci Rosa."
     right:
-      - about.qmd
+      - icon: github
+        href: https://github.com/GabrielPalucci/
+      - icon: envelope
+        href: gabrielpalucciufu@gmail.com
+  navbar:
+    logo: "planta.png"
+    right:
+      - text: ABOUT
+        menu:
+          - text: English
+            href: about/about_e.qmd
+          - text: Português
+            href: about/about_p.qmd
+      - text: PUBLICATIONS
+        href: publication.qmd
+      - text: BLOG
+        href: blog.qmd
       - icon: github
         href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme:
+    - cosmo
+    - theme.scss
+linestretch: 2
+
 
 editor: visual
+comments:
+  giscus:
+    repo: GabrielPalucci/Blog
+    
 

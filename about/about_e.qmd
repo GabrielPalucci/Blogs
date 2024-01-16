@@ -1,0 +1,40 @@
+---
+title: "About"
+image: image.png
+about:
+  template: trestles
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile
+    - icon: github
+      text: Github
+      href: https://github.com/GabrielPalucci
+comments: false
+---
+
+```{=html}
+    <style>
+        body {
+            text-align: justify;
+          
+        }
+         p {
+            font-size: 19px;
+    }
+    </style>
+<body
+    <p>Hello and welcome to my blog. I seek to bring <a href = "https://gabrielpalucci.github.io/Blog/blog.html"style = "color: #d2a88f;">  <b> content about soil</b> </a> and discussion about soil science. Learn more about my research interests in <a href = "https://gabrielpalucci.github.io/Blog/publication.html"style = "color: #d2a88f;">  <b>publication</b> </a>.
+</body>
+```
+
+------------------------------------------------------------------------
+
+```{=html}
+<p style="text-align: center; font-size: 40px; font-family: 'Garamond', sans-serif;"> Education  </p>
+```
+{{< fa graduation-cap >}} Degree in <mark>Geography</mark> from the Federal University of Uberlândia
+
+{{< fa graduation-cap >}} Master degree <mark>Geography</mark> from the Federal University of Uberlândia
+
+{{< fa book-open >}} PhD student in <mark>Soil and Plant Nutrition</mark> by the Federal University of Viçosa

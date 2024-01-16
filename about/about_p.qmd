@@ -1,0 +1,40 @@
+---
+title: ""
+image: image.png
+about:
+  template: trestles
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile
+    - icon: github
+      text: Github
+      href: https://github.com/GabrielPalucci
+comments: false
+---
+
+```{=html}
+    <style>
+        body {
+            text-align: justify;
+          
+        }
+         p {
+            font-size: 19px;
+    }
+    </style>
+<body
+    <p>Olá e bem vindo ao meu blog. Eu procuro trazer <a href = "https://gabrielpalucci.github.io/Blog/blog.html"style = "color: #d2a88f;">  <b> conteúdo e discussões </b> </a> sobre a ciência do solo. Saiba mais sobre os meus interreses de pesquisa em <a href = "https://gabrielpalucci.github.io/Blog/publication.html"style = "color: #d2a88f;">  <b>publicações</b></a>.
+</body>
+```
+
+------------------------------------------------------------------------
+
+```{=html}
+<p style="text-align: center; font-size: 40px; font-family: 'Garamond', sans-serif;"> Formação Académica </p>
+```
+{{< fa graduation-cap >}} Graduação em <mark>Geografia</mark> pela Universidade Federal de Uberlândia
+
+{{< fa graduation-cap >}} Mestrado em <mark>Geografia</mark> pela Universidade Federal de Uberlâdia
+
+{{< fa book-open >}} Doutorando em <mark>Solo e Nutrição de plantas</mark> pela Unviversidade Federal de Viçosa

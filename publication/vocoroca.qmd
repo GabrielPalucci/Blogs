@@ -1,0 +1,57 @@
+---
+title: "Soil-environment relationship in an area degraded by gullies in the Minas Gerais state, Brazil"
+title-block-banner: voc.jpg
+title-block-banner-color: "black"
+comments: false
+categories:
+  - Brazilian savanna
+  - Soil erosion
+  - Soil-environment
+  - Ecosystem restoration
+date: 09-15-2023
+author:
+  - name: Guilherme Resende Corrêa
+  - name: <b>Gabriel Palucci Rosa</b>
+  - name: Maria Lúcia Furtado Coelho Campos
+  - name: Gabriel Miranda Paranaiba Bernardes
+  - name: Flávia Monize Ferreira dos Santos
+  - name: Viviane Arantes Koch
+  - name: Diogo Costa Nascimento
+---
+
+Revista Brasileira de Geomorfologia
+
+```{=html}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ykDXAzs5wu0ZOv5k+udLh9wi+doaRnXQqM9INNIXHjg5aB6QCEXrOM8kqVOEbc4M" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Link com Ícone</title>
+</head>
+<body>
+
+<!-- Link com Ícone e Estilo de Botão -->
+<a href="https://doi.org/10.20502/rbg.v24i3.2384" class="btn btn-secondary text-capitalize" target="_blank">
+    <i class="bi bi-file-richtext-fill me-1"></i> Publication
+</a>
+
+<!-- Scripts do Bootstrap (para o estilo) e Bootstrap Icons -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ZJJfbfDR1P7e6LqfymWd8FD5SOQsUt5a9L7eC5JR09v8O2tufhmD9L9Ljvp1G5s" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/dist/svg/bootstrap-icons.svg"></script>
+
+</body>
+```
+## Abstract
+
+```{=html}
+    <style>
+        body {
+            text-align: justify; }
+    </style>
+<body>
+    <p>Soil  degradation  represents  a  current  and  future  risk  of  compromising  ecosystem  services. This  papper  aims  to characterize  the  soil  attributes  of  a  degraded  area  and  conserved  Savana  fragments  in  Minas  Gerais  state,  Brazil.For  this purpose, a multitemporal assessment of a gully using GIS was carried out; field work was carried out with collections at 39 sampling  points  and  description  of  5  soil  profiles,  in  previously  stratified  environments;  in  the  laboratory,  the  physical, chemical and organic matter attributes of the soil was determined and statistical analyzes was conducted.Time after time, an evolution of soil degradation of 62% of thearea was estimated, going from 499.5 m²/year in the period of accelerated erosion (1964-1979) to 96.9 m²/year (2005 -2020). The PCA highlights the Mata environment as the most fertile, with associated vectors of   organic   matter,   base   saturation   and   macro   and   micronutrients;   Statistical   tests   indicate   variations   between   the granulometric fractions of conserved environments and degraded areas and equality of organic matter in Cerradão and Mata to  the  detriment  of  gullie.  Organic  matter  management,  aiming  at  its  incorporation  and  increment  in  the  soil,  should  be privileged in ecosystemrestoration projects
+  </p>
+</body>
+```
