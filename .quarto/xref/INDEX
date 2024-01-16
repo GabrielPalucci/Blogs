@@ -1,0 +1,116 @@
+{
+  "about.qmd": {
+    "about.html": "88849eb0"
+  },
+  "index.qmd": {
+    "index.html": "fdd7ba30"
+  },
+  "posts/CopyOfpost-with-code/index.qmd": {
+    "index.html": "2710f285"
+  },
+  "posts/post-with-code/index.qmd": {
+    "index.html": "bde590e9"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "97133dd2"
+  },
+  "posts/Amostragem/index.qmd": {
+    "index.html": "d729a633"
+  },
+  "Talk.qmd": {
+    "Talk.html": "be7eda86"
+  },
+  "posts/Amostragem.qmd": {
+    "Amostragem.html": "76cfa6d3"
+  },
+  "posts/Amostragem/Amostragem.qmd": {
+    "Amostragem.html": "b36521fa"
+  },
+  "Conversa.qmd": {
+    "Conversa.html": "0cfe074d"
+  },
+  "conversa.qmd": {
+    "conversa.html": "cf0b2ea4"
+  },
+  "About_i.qmd": {
+    "About_i.html": "d1cda911"
+  },
+  "sobre.qmd": {
+    "sobre.html": "b826be49"
+  },
+  "about_en.qmd": {
+    "about_en.html": "3b44fd96"
+  },
+  "about_pt.qmd": {
+    "about_pt.html": "32b2873d"
+  },
+  "talk.qmd": {
+    "talk.html": "48ffcc1d"
+  },
+  "talk_pt.qmd": {
+    "talk_pt.html": "aa39167d"
+  },
+  "research.qmd": {
+    "research.html": "7afd4cb9"
+  },
+  "pesquisa.qmd": {
+    "pesquisa.html": "ad5ccb5e"
+  },
+  "about/about_en.qmd": {
+    "about_en.html": "19d6c768"
+  },
+  "about/about_pt.qmd": {
+    "about_pt.html": "7b3c84d8"
+  },
+  "talk/talk_en.qmd": {
+    "talk_en.html": "0f10458b"
+  },
+  "talk/talk_pt.qmd": {
+    "talk_pt.html": "c03a17a1"
+  },
+  "defaut.qmd": {
+    "defaut.html": "ef90bff7"
+  },
+  "blog.qmd": {
+    "blog.html": "6b4970f2"
+  },
+  "Publication.qmd": {
+    "Publication.html": "c6afc90a"
+  },
+  "publication.qmd": {
+    "publication.html": "f33654da"
+  },
+  "publication/research.qmd": {
+    "research.html": "6bc81cda"
+  },
+  "research/Pesquisa.qmd": {
+    "Pesquisa.html": "ee9281a6"
+  },
+  "research/arido.qmd": {
+    "arido.html": "d1d032cb"
+  },
+  "publication/arido.qmd": {
+    "arido.html": "e60c8fb6"
+  },
+  "publication/vocoroca.qmd": {
+    "vocoroca.html": "62c33c21"
+  },
+  "publication/pantanal_1.qmd": {
+    "pantanal_1.html": "bad6ecfe"
+  },
+  "about/about_e.qmd": {
+    "about_e.html": "e9c50b94"
+  },
+  "about/about_p.qmd": {
+    "about_p.html": "4854853c"
+  },
+  "publication/pantanal.qmd": {
+    "pantanal.html": "f69b7f18"
+  },
+  "posts/Tidyverse/tidyverse.qmd": {
+    "tidyverse.html": "ff254810"
+  },
+  "posts/Dplyr/Dplyr.qmd": {
+    "Dplyr.html": "f5cd9711"
+  }
+}
