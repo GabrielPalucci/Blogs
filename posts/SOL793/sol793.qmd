@@ -1,0 +1,16 @@
+---
+image: figure.jpg
+page-layout: article
+title-block-banner: SOL.pnj
+date: "2023-12-22"
+title: "Linguagem R e Aprendizado de Máquina"
+author: "Gabriel Palucci Rosa"
+toc: true
+toc-title: "Table of Content"
+categories:
+  - Solo
+  - R
+  - Machine Learning
+---
+
+# Introdução

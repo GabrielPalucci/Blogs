@@ -1,5 +1,5 @@
 ---
-image: figure.jpg
+image: renome.jpeg
 page-layout: article
 title-block-banner: coleta.png
 date: "2023-12-22"
@@ -52,7 +52,6 @@ virtual_shovel <- bowl %>%
      rep_sample_n(size = 50)
 ```
 
-
 Nesse caso, utilizamos o comando *rep_sample_n* para selecior 50 amostras de forma randômica do nossa base de dados.
 
 ```{r, warning=FALSE}
@@ -77,7 +76,7 @@ bowl %>%
 
 Como podemos observar, realizamos uma amostragem de 50 bolinhas 33 vezes e obtemos a proporção de bolinhar vermelhas em cada amostragem.
 
-*O valor do tamanho da amostragem influência na proporção das bolinhas vermelhas?* 
+*O valor do tamanho da amostragem influência na proporção das bolinhas vermelhas?*
 
 *O valor do tamanho da amostragem influência desvio padrão das bolinhas vermelhas?*
 
@@ -153,16 +152,6 @@ virtual_prop_red_100 %>%
 
 ```
 
-
-À medida que o tamanho da amostra aumenta, o desvio padrão da proporção de bolas vermelhas diminui. 
-Este tipo de desvio padrão tem outro nome especial: erro padrão. Os erros padrão quantificam o efeito 
-da variação de amostragem induzida em nossas estimativas. Em outras palavras, eles quantificam quanto 
-podemos esperar que diferentes proporções de bolas vermelhas em uma pá variem de uma amostra para 
-outra, e assim por diante. 
+À medida que o tamanho da amostra aumenta, o desvio padrão da proporção de bolas vermelhas diminui. Este tipo de desvio padrão tem outro nome especial: erro padrão. Os erros padrão quantificam o efeito da variação de amostragem induzida em nossas estimativas. Em outras palavras, eles quantificam quanto podemos esperar que diferentes proporções de bolas vermelhas em uma pá variem de uma amostra para outra, e assim por diante.
 
 Como regra geral, à medida que o tamanho da amostra aumenta, o erro padrão diminui.
-
-
-
-
-
