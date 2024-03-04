@@ -1,5 +1,5 @@
 ---
-image: figure.jpg
+image: renome.jpeg
 page-layout: article
 title-block-banner: SOL.pnj
 date: "2023-12-22"
