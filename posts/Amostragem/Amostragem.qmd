@@ -2,7 +2,7 @@
 image: figure.jpg
 page-layout: article
 title-block-banner: coleta.png
-date: "2024-2-1"
+date: "2023-12-20"
 title: "Pensando sobre o processo de Amostragem"
 author: "Gabriel Palucci Rosa"
 toc: true
