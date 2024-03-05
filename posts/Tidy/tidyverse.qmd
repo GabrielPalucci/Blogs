@@ -184,7 +184,7 @@ Como podemos ver os penguins mais gordos são da espécie gentoo e localizam na 
 
 ```{r, warning=FALSE}
 
-ggplot( data = na.omit(pinguim), aes(x= Tamanho_Bico_mm, y = Espessura_Bico_mm)) +
+ggplot(data = na.omit(pinguim), aes(x= Tamanho_Bico_mm, y = Espessura_Bico_mm)) +
                 geom_point(aes(color = Especies, size = Peso_g )) +
                 labs(x = "Tamanho_Bico_mm", 
                       y = "Espessura_Bico_mm")+
