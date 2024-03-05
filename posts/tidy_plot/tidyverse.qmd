@@ -15,32 +15,27 @@ categories:
 
 # Introduction
 
-
-```{html}
-
-<p>
 Quando analisamos base de dados que contêm diversas colunas e linhas, se faz necessário saber comando no qual irá facilitar o "manejo" dos nossos dados. Podendo assim selecionar apenas algumas variávies ou alguns linhas. Alguns pessoas podem pensar usar outros sofwares do SQL no qual sua função está ligado diretamente a manipulação dos dados. Entretanto, é interessante utilizarmos o R! pois irá facilitar posteriormente a analisar os dados, não precisando importar e exportar base de dados de um sofware para outro
 
 Assim, nesse post pretendo mostrar formas interressantes de realizar a manipulação de dados utilizando pacotes de funções simples. Posteriormente realizar alguns plots para visualizar melhor os dados, pra não ficarmos apenas em tabelas chatas hehe.
-</p> 
-  
-```
 
 # Installing the package
 
-Para
+Para isso iremos utilizar alguns pacote, como podemos observar abaixo.
 
 ```{r, warning=FALSE}
 
 library(pacman)
 
-p_load("tidyverse", "magrittr", "palmerpenguins")
+p_load("tidyverse", "magrittr", "palmerpenguins", "ggplot2")
 
 library("tidyverse")
 library("magrittr")
 library('palmerpenguins')
 
 ```
+
+A base de dados será do palmerpenguins, que apresenta a descrição de dados de três espécies de pinguins em diferentes ilhas. A base de dados vem sendo utilizada para substituir a base iris.
 
 ```{r}
 pinguim <- dplyr::as_tibble(palmerpenguins::penguins)
@@ -49,6 +44,8 @@ pinguim <- dplyr::as_tibble(palmerpenguins::penguins)
 # Using Dplyr
 
 ## Rename
+
+Uns dos primeiros argumentos que iremos utilizar é o *rename* que possibilita modificar o nome das nossas colunas. Como podemos observar no dados abaixos que traduzimos todas as colunas para português.
 
 ```{r}
 
@@ -64,6 +61,8 @@ pinguim <- pinguim %>%
 ```
 
 ## Slice
+
+O slice possibilita realizar um corte dos dados, selecionando apenas um fração das linhas. No exemplo selecionamos apenas as primeiras 10 linhas do dados
 
 ```{r, warning=FALSE}
 
@@ -94,6 +93,8 @@ pinguim %>%
 
 ## Filter
 
+FUNCIONA???
+
 Como o nome ja diz, o **Filter** tem como princípio a filtragemn do nosso base de dados com a utilização de paramétros como:
 
 == Igual\
@@ -107,7 +108,7 @@ is.na Sem valores
 
 Podemos adicionar condições como **,** para **e** e **\|** para **ou**.
 
-```{r, }
+```{r}
 
 
 pinguim %>% filter(Peso_g > 1000, Espessura_Bico_mm > 10) %>% 
@@ -158,6 +159,37 @@ pinguim %>% group_by(Ilha, Especies) %>%
   
 
 ```
+
+# Juntando diferentes funções
+
+Algumas perguntas podem nos ocorrer ao realizarmos a manipulação dos dados, um exemplo é
+
+-    Dos 10 penguins mais gordinhos, algum que está localizado na ilha Biscoe e qual especie é?
+
+Para realizar esssa pegunta podemos realizar uma seleção das nossas colunas para facilitar a observação da tabela, posteriormente organizar os dados em decressente em relação ao peso dos penguins e por fim selecionar as primemiras 10 linhas dos dados.
+
+
+```{r}
+
+pinguim %>% 
+            select(Especies, Ilha, Peso_g) %>% 
+            arrange(desc(Peso_g)) %>% 
+            slice(1:10) %>% 
+            rmarkdown::paged_table()
+
+```
+
+Como podemos ver os penguins mais gordos são da espécie gentoo e localizam na ilha Biscoe. No próximo post iremos utilizar base de dados de solos para realizar alguns plots utilizando o ggplot. Aqui irei deixar apenas um plot demostrando algumas relações entre dos dados palmerpinguins
+
+```{r}
+
+ggplot(pinguim, aes(x=Tamanho_Bico_mm, y = Espessura_Bico_mm)) +
+                geom_point(aes(color = Especies, size = Peso_g )) +
+                labs(x = "Tamanho_Bico_mm", 
+                      y = "Espessura_Bico_mm")+
+                theme_light()
+```
+
 
 # Referência
 
