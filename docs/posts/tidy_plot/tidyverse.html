@@ -174,7 +174,7 @@ background-size: cover;
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Utilizando Dplyr | palmerpenguins</h1>
+      <h1 class="title">Utilizando Dplyr e ggplot2 | palmerpenguins</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Penguins</div>
                 <div class="quarto-category">Dplyr</div>
@@ -225,6 +225,7 @@ background-size: cover;
   <li><a href="#arrange" id="toc-arrange" class="nav-link" data-scroll-target="#arrange">Arrange()</a></li>
   <li><a href="#group_by-summarise" id="toc-group_by-summarise" class="nav-link" data-scroll-target="#group_by-summarise">Group_by() / Summarise()</a></li>
   </ul></li>
+  <li><a href="#juntando-diferentes-funções" id="toc-juntando-diferentes-funções" class="nav-link" data-scroll-target="#juntando-diferentes-funções">Juntando diferentes funções</a></li>
   <li><a href="#referência" id="toc-referência" class="nav-link" data-scroll-target="#referência">Referência</a></li>
   </ul>
 </nav>
@@ -238,18 +239,22 @@ background-size: cover;
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
+<p>Quando analisamos base de dados que contêm diversas colunas e linhas, se faz necessário saber comando no qual irá facilitar o “manejo” dos nossos dados. Podendo assim selecionar apenas algumas variávies ou alguns linhas. Alguns pessoas podem pensar usar outros sofwares do SQL no qual sua função está ligado diretamente a manipulação dos dados. Entretanto, é interessante utilizarmos o R! pois irá facilitar posteriormente a analisar os dados, não precisando importar e exportar base de dados de um sofware para outro</p>
+<p>Assim, nesse post pretendo mostrar formas interressantes de realizar a manipulação de dados utilizando pacotes de funções simples. Posteriormente realizar alguns plots para visualizar melhor os dados, pra não ficarmos apenas em tabelas chatas hehe.</p>
 </section>
 <section id="installing-the-package" class="level1">
 <h1>Installing the package</h1>
+<p>Para isso iremos utilizar alguns pacote, como podemos observar abaixo.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pacman)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(<span class="st">"tidyverse"</span>, <span class="st">"magrittr"</span>, <span class="st">"palmerpenguins"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">p_load</span>(<span class="st">"tidyverse"</span>, <span class="st">"magrittr"</span>, <span class="st">"palmerpenguins"</span>, <span class="st">"ggplot2"</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"magrittr"</span>)</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">'palmerpenguins'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>A base de dados será do palmerpenguins, que apresenta a descrição de dados de três espécies de pinguins em diferentes ilhas. A base de dados vem sendo utilizada para substituir a base iris.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pinguim <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">as_tibble</span>(palmerpenguins<span class="sc">::</span>penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -258,6 +263,7 @@ background-size: cover;
 <h1>Using Dplyr</h1>
 <section id="rename" class="level2">
 <h2 class="anchored" data-anchor-id="rename">Rename</h2>
+<p>Uns dos primeiros argumentos que iremos utilizar é o <em>rename</em> que possibilita modificar o nome das nossas colunas. Como podemos observar no dados abaixos que traduzimos todas as colunas para português.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pinguim <span class="ot">&lt;-</span> pinguim <span class="sc">%&gt;%</span> </span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>           <span class="fu">rename</span>(<span class="at">Especies =</span> species, </span>
@@ -272,6 +278,7 @@ background-size: cover;
 </section>
 <section id="slice" class="level2">
 <h2 class="anchored" data-anchor-id="slice">Slice</h2>
+<p>O slice possibilita realizar um corte dos dados, selecionando apenas um fração das linhas. No exemplo selecionamos apenas as primeiras 10 linhas do dados</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pinguim <span class="sc">%&gt;%</span> </span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">20</span>) <span class="sc">%&gt;%</span> rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(pinguim)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -316,6 +323,7 @@ background-size: cover;
 </section>
 <section id="filter" class="level2">
 <h2 class="anchored" data-anchor-id="filter">Filter</h2>
+<p>FUNCIONA???</p>
 <p>Como o nome ja diz, o <strong>Filter</strong> tem como princípio a filtragemn do nosso base de dados com a utilização de paramétros como:</p>
 <p>== Igual<br>
 &gt; Maior<br>
@@ -390,6 +398,46 @@ is.na Sem valores</p>
 </div>
 </div>
 </section>
+</section>
+<section id="juntando-diferentes-funções" class="level1">
+<h1>Juntando diferentes funções</h1>
+<p>Algumas perguntas podem nos ocorrer ao realizarmos a manipulação dos dados, um exemplo é</p>
+<ul>
+<li>Dos 10 penguins mais gordinhos, algum que está localizado na ilha Biscoe e qual especie é?</li>
+</ul>
+<p>Para realizar esssa pegunta podemos realizar uma seleção das nossas colunas para facilitar a observação da tabela, posteriormente organizar os dados em decressente em relação ao peso dos penguins e por fim selecionar as primemiras 10 linhas dos dados.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pinguim <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>            <span class="fu">select</span>(Especies, Ilha, Peso_g) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>            <span class="fu">arrange</span>(<span class="fu">desc</span>(Peso_g)) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>            <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>            rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Especies"],"name":[1],"type":["fct"],"align":["left"]},{"label":["Ilha"],"name":[2],"type":["fct"],"align":["left"]},{"label":["Peso_g"],"name":[3],"type":["int"],"align":["right"]}],"data":[{"1":"Gentoo","2":"Biscoe","3":"6300"},{"1":"Gentoo","2":"Biscoe","3":"6050"},{"1":"Gentoo","2":"Biscoe","3":"6000"},{"1":"Gentoo","2":"Biscoe","3":"6000"},{"1":"Gentoo","2":"Biscoe","3":"5950"},{"1":"Gentoo","2":"Biscoe","3":"5950"},{"1":"Gentoo","2":"Biscoe","3":"5850"},{"1":"Gentoo","2":"Biscoe","3":"5850"},{"1":"Gentoo","2":"Biscoe","3":"5850"},{"1":"Gentoo","2":"Biscoe","3":"5800"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Como podemos ver os penguins mais gordos são da espécie gentoo e localizam na ilha Biscoe. No próximo post iremos utilizar base de dados de solos para realizar alguns plots utilizando o ggplot. Aqui irei deixar apenas um plot demostrando algumas relações entre dos dados palmerpinguins</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(pinguim, <span class="fu">aes</span>(<span class="at">x=</span>Tamanho_Bico_mm, <span class="at">y =</span> Espessura_Bico_mm)) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Especies, <span class="at">size =</span> Peso_g )) <span class="sc">+</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>                <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Tamanho_Bico_mm"</span>, </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y =</span> <span class="st">"Espessura_Bico_mm"</span>)<span class="sc">+</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                <span class="fu">theme_light</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="tidyverse_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="referência" class="level1">
 <h1>Referência</h1>

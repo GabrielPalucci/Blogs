@@ -164,10 +164,9 @@ pinguim %>% group_by(Ilha, Especies) %>%
 
 Algumas perguntas podem nos ocorrer ao realizarmos a manipulação dos dados, um exemplo é
 
--    Dos 10 penguins mais gordinhos, algum que está localizado na ilha Biscoe e qual especie é?
+-   Dos 10 penguins mais gordinhos, algum que está localizado na ilha Biscoe e qual especie é?
 
 Para realizar esssa pegunta podemos realizar uma seleção das nossas colunas para facilitar a observação da tabela, posteriormente organizar os dados em decressente em relação ao peso dos penguins e por fim selecionar as primemiras 10 linhas dos dados.
-
 
 ```{r}
 
@@ -189,7 +188,6 @@ ggplot(pinguim, aes(x=Tamanho_Bico_mm, y = Espessura_Bico_mm)) +
                       y = "Espessura_Bico_mm")+
                 theme_light()
 ```
-
 
 # Referência
 
