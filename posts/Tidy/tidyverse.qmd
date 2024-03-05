@@ -177,10 +177,11 @@ pinguim %>%
             rmarkdown::paged_table()
 
 ```
-
-# Plot
+ 
 
 Como podemos ver os penguins mais gordos são da espécie gentoo e localizam na ilha Biscoe. No próximo post iremos utilizar base de dados de solos para realizar alguns plots utilizando o ggplot. Aqui irei deixar apenas um plot demostrando algumas relações entre dos dados palmerpinguins
+
+#Plot
 
 ```{r, warning=FALSE}
 
@@ -191,6 +192,8 @@ ggplot(data = na.omit(pinguim), aes(x= Tamanho_Bico_mm, y = Espessura_Bico_mm)) 
                 facet_wrap(~Sexo) +
                 theme_light()
 ```
+
+  No caso, podemos observar que os pinguins machos tendem apresentar valores superiores em todas as métricas analisadas, como tamanho do bico, espessura e peso. 
 
 # Referência
 

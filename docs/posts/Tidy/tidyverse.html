@@ -226,7 +226,6 @@ background-size: cover;
   <li><a href="#group_by-summarise" id="toc-group_by-summarise" class="nav-link" data-scroll-target="#group_by-summarise">Group_by() / Summarise()</a></li>
   </ul></li>
   <li><a href="#juntando-diferentes-funções" id="toc-juntando-diferentes-funções" class="nav-link" data-scroll-target="#juntando-diferentes-funções">Juntando diferentes funções</a></li>
-  <li><a href="#plot" id="toc-plot" class="nav-link" data-scroll-target="#plot">Plot</a></li>
   <li><a href="#referência" id="toc-referência" class="nav-link" data-scroll-target="#referência">Referência</a></li>
   </ul>
 </nav>
@@ -421,10 +420,8 @@ is.na Sem valores</p>
 </div>
 </div>
 </div>
-</section>
-<section id="plot" class="level1">
-<h1>Plot</h1>
 <p>Como podemos ver os penguins mais gordos são da espécie gentoo e localizam na ilha Biscoe. No próximo post iremos utilizar base de dados de solos para realizar alguns plots utilizando o ggplot. Aqui irei deixar apenas um plot demostrando algumas relações entre dos dados palmerpinguins</p>
+<p>#Plot</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">na.omit</span>(pinguim), <span class="fu">aes</span>(<span class="at">x=</span> Tamanho_Bico_mm, <span class="at">y =</span> Espessura_Bico_mm)) <span class="sc">+</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Especies, <span class="at">size =</span> Peso_g )) <span class="sc">+</span></span>
@@ -440,6 +437,7 @@ is.na Sem valores</p>
 </div>
 </div>
 </div>
+<p>No caso, podemos observar que os pinguins machos tendem apresentar valores superiores em todas as métricas analisadas, como tamanho do bico, espessura e peso.</p>
 </section>
 <section id="referência" class="level1">
 <h1>Referência</h1>
