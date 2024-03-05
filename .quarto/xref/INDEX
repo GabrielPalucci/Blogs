@@ -118,5 +118,11 @@
   },
   "posts/SOL793/sol793.qmd": {
     "sol793.html": "f6ec7a18"
+  },
+  "posts/tidy/tidyverse.qmd": {
+    "tidyverse.html": "9c4af99c"
+  },
+  "posts/tidy_plot/tidyverse.qmd": {
+    "tidyverse.html": "2694f02a"
   }
 }
