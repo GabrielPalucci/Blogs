@@ -141,10 +141,6 @@ pinguim %>%
       select(Especies, Ilha, Peso_g) %>% 
       arrange(desc(Peso_g)) %>%
       rmarkdown::paged_table()                 
-
-
-
-
 ```
 
 ## Group_by() / Summarise()
