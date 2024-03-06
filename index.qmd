@@ -1,7 +1,7 @@
 ---
 html:
     margin-top: 70px
-image: perfil.png
+image: image/perfil.png
 about:
   template: trestles
   links:

@@ -12,6 +12,3 @@ categories:
   - R
   - Machine Learning
 ---
-
-
-
