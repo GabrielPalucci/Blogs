@@ -127,5 +127,8 @@
   },
   "posts/Tidy/tidyverse.qmd": {
     "tidyverse.html": "bc485e56"
+  },
+  "posts/Tidy/tidyverse.rmarkdown": {
+    "tidyverse.html": "c7b99c3f"
   }
 }

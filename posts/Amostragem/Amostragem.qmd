@@ -22,7 +22,7 @@ Antes de utilizar exemplos sobre solo, utilizaremos uma base de dados de bolinhh
 Assim, existe dois efeitos improtantes que serão descutidos nesse tópico
 
 -   Efeito na variação de dados nas amostragem
--   EFeito do tamanho da amostragem na variação da amostra
+-   Efeito do tamanho da amostragem na variação da amostra
 
 # Estudo de Caso
 
@@ -30,11 +30,13 @@ Assim, existe dois efeitos improtantes que serão descutidos nesse tópico
 
 #/Pacotes
 
-```{r, warning=FALSE}
+```{r, warning=FALSE, attr.message= FALSE}
 
 library(ggthemes)
 library(tidyverse)
 library(moderndive)
+library(cowplot)
+library(rmarkdown)
 ```
 
 #/Dados
@@ -43,14 +45,14 @@ Para isso vamos utilizar a base de dados *bowl* para demostrar o processo de amo
 
 ```{r}
 
-bowl
+bowl %>% paged_table()
 
 ```
 
 ```{r}
 
 virtual_shovel <- bowl %>% 
-     rep_sample_n(size = 50)
+     rep_sample_n(size = 50) %>% paged_table()
 ```
 
 Nesse caso, utilizamos o comando *rep_sample_n* para selecior 50 amostras de forma randômica do nossa base de dados.
@@ -60,7 +62,8 @@ Nesse caso, utilizamos o comando *rep_sample_n* para selecior 50 amostras de for
 virtual_shovel %>%
   mutate(is_red = color == "red") %>% 
   summarize(num_red = sum(is_red)) %>% 
-  mutate(prop_red = num_red / 50)
+  mutate(prop_red = num_red / 50) %>% 
+  paged_table()
 
 ```
 
@@ -72,7 +75,8 @@ bowl %>%
      rep_sample_n(size = 50, reps = 33) %>% 
      group_by(replicate) %>% 
      summarize(red = sum(color == "red")) %>% 
-     mutate(prop_red = red / 50)
+     mutate(prop_red = red / 50) %>% 
+    paged_table()
 ```
 
 Como podemos observar, realizamos uma amostragem de 50 bolinhas 33 vezes e obtemos a proporção de bolinhar vermelhas em cada amostragem.
@@ -93,10 +97,11 @@ virtual_samples_25 <- bowl %>%
   mutate(prop_red = red / 25)
 
   
-# 1.c) Plot distribution via a histogram
-ggplot(virtual_samples_25, aes(x = prop_red)) +
+# 1.c) Plot da dsitribuição em uma histograma
+a <- ggplot(virtual_samples_25, aes(x = prop_red)) +
   geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 25 balls that were red", title = "25") 
+  labs(x = "Proportion of 25 balls that were red", title = "25") +
+  theme_wsj()
 
 
 # Segment 2: sample size = 50 ------------------------------
@@ -111,9 +116,10 @@ virtual_prop_red_50 <- virtual_samples_50 %>%
   mutate(prop_red = red / 50)
 
 # 2.c) Plot distribution via a histogram
-ggplot(virtual_prop_red_50, aes(x = prop_red)) +
+b <- ggplot(virtual_prop_red_50, aes(x = prop_red)) +
   geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 50 balls that were red", title = "50")  
+  labs(x = "Proportion of 50 balls that were red", title = "50")  +
+  theme_wsj()
 
 
 # Segment 3: sample size = 100 ------------------------------
@@ -128,14 +134,14 @@ virtual_prop_red_100 <- virtual_samples_100 %>%
   mutate(prop_red = red / 100)
 
 # 3.c) Plot distribution via a histogram
-  ggplot(virtual_prop_red_100, aes(x = prop_red)) +
+  c <- ggplot(virtual_prop_red_100, aes(x = prop_red)) +
   geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
   labs(x = "Proportion of 100 balls that were red", title = "100") +
-  theme_wsj(color = "FDF1E1")
+  theme_wsj()
 
-
-
-
+  
+  
+plot_grid(a, b, c, nrow = 1, ncol = 3)
 
 ```
 
@@ -143,8 +149,8 @@ virtual_prop_red_100 <- virtual_samples_100 %>%
 
 # n = 25
 
-# virtual_prop_red_25 %>% 
-#   summarize(sd = sd(prop_red))
+#virtual_prop_red_25 %>% 
+ # summarize(sd = sd(prop_red))
 
 # n = 50
 virtual_prop_red_50 %>% 
@@ -153,6 +159,8 @@ virtual_prop_red_50 %>%
 # n = 100
 virtual_prop_red_100 %>% 
   summarize(sd = sd(prop_red))
+
+
 
 ```
 
