@@ -30,7 +30,7 @@ Assim, existe dois efeitos improtantes que serão descutidos nesse tópico
 
 #/Pacotes
 
-```{r, warning=FALSE, attr.message= FALSE}
+```{r, warning=FALSE, include=FALSE}
 
 library(ggthemes)
 library(tidyverse)
