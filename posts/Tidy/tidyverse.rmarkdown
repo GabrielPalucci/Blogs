@@ -13,6 +13,7 @@ categories:
   - ggplot2
 ---
 
+
 # Introduction
 
 Quando analisamos base de dados que contêm diversas colunas e linhas, se faz necessário saber comando no qual irá facilitar o "manejo" dos nossos dados. Podendo assim selecionar apenas algumas variávies ou alguns linhas. Alguns pessoas podem pensar usar outros sofwares do SQL no qual sua função está ligado diretamente a manipulação dos dados. Entretanto, é interessante utilizarmos o R! pois irá facilitar posteriormente a analisar os dados, não precisando importar e exportar base de dados de um sofware para outro
@@ -22,6 +23,7 @@ Assim, nesse post pretendo mostrar formas interressantes de realizar a manipula�
 # Installing the package
 
 Para isso iremos utilizar alguns pacote, como podemos observar abaixo.
+
 
 ```{r, warning=FALSE}
 
@@ -36,17 +38,21 @@ library(ggthemes)
 
 ```
 
+
 A base de dados será do palmerpenguins, que apresenta a descrição de dados de três espécies de pinguins em diferentes ilhas. A base de dados vem sendo utilizada para substituir a base iris.
+
 
 ```{r}
 pinguim <- dplyr::as_tibble(palmerpenguins::penguins)
 ```
+
 
 # Using Dplyr
 
 ## Rename
 
 Uns dos primeiros argumentos que iremos utilizar é o *rename* que possibilita modificar o nome das nossas colunas. Como podemos observar no dados abaixos que traduzimos todas as colunas para português.
+
 
 ```{r}
 
@@ -61,9 +67,11 @@ pinguim <- pinguim %>%
                   Ano = year)
 ```
 
+
 ## Slice
 
 O slice possibilita realizar um corte dos dados, selecionando apenas um fração das linhas. No exemplo selecionamos apenas as primeiras 10 linhas do dados
+
 
 ```{r, warning=FALSE}
 
@@ -71,7 +79,9 @@ pinguim %>%
         slice(1:20) %>% rmarkdown::paged_table(pinguim)
 ```
 
+
 ## Select
+
 
 ```{r paged.print=FALSE}
 
@@ -81,7 +91,9 @@ pinguim %>%
 
 ```
 
+
 ## Mutate
+
 
 ```{r}
 
@@ -92,6 +104,7 @@ pinguim %>%
       rmarkdown::paged_table()
 
 ```
+
 
 ## Filter
 
@@ -110,6 +123,7 @@ is.na Sem valores
 
 Podemos adicionar condições como **,** para **e** e **\|** para **ou**.
 
+
 ```{r}
 
 
@@ -118,9 +132,11 @@ pinguim %>% filter(Peso_g > 1000, Espessura_Bico_mm > 10) %>%
 
 ```
 
+
 ## Relocate()
 
 Utilizamos para relocar as **colunas** de posição em nossa base de dados
+
 
 ```{r}
   
@@ -133,9 +149,11 @@ pinguim %>%
 
 ```
 
+
 ## Arrange()
 
 Organizar a nossa base de dados
+
 
 ```{r}
 
@@ -145,7 +163,9 @@ pinguim %>%
       rmarkdown::paged_table()                 
 ```
 
+
 ## Group_by() / Summarise()
+
 
 ```{r, warning=FALSE}
 
@@ -158,6 +178,7 @@ pinguim %>% group_by(Ilha, Especies) %>%
 
 ```
 
+
 # Juntando diferentes funções
 
 Algumas perguntas podem nos ocorrer ao realizarmos a manipulação dos dados, um exemplo é
@@ -165,6 +186,7 @@ Algumas perguntas podem nos ocorrer ao realizarmos a manipulação dos dados, um
 -   Dos 10 penguins mais gordinhos, algum que está localizado na ilha Biscoe e qual especie é?
 
 Para realizar esssa pegunta podemos realizar uma seleção das nossas colunas para facilitar a observação da tabela, posteriormente organizar os dados em decressente em relação ao peso dos penguins e por fim selecionar as primemiras 10 linhas dos dados.
+
 
 ```{r}
 
@@ -176,9 +198,11 @@ pinguim %>%
 
 ```
 
+
 Como podemos ver os penguins mais gordos são da espécie gentoo e localizam na ilha Biscoe. No próximo post iremos utilizar base de dados de solos para realizar alguns plots utilizando o ggplot. Aqui irei deixar apenas um plot demostrando algumas relações entre dos dados palmerpinguins
 
 #Plot
+
 
 ```{r, warning=FALSE}
 
@@ -192,6 +216,7 @@ ggplot(data = na.omit(pinguim), aes(x= Tamanho_Bico_mm, y = Espessura_Bico_mm)) 
                 theme_wsj()
 ```
 
+
 No caso, podemos observar que os pinguins machos tendem apresentar valores superiores em todas as métricas analisadas, como tamanho do bico, espessura e peso.
 
 # Referência
@@ -199,3 +224,4 @@ No caso, podemos observar que os pinguins machos tendem apresentar valores super
 [ ](https://github.com/allisonhorst/palmerpenguins)
 
 ![](https://www.tidyverse.org/images/hex-tidyverse.png){width="15%"} ![](https://magrittr.tidyverse.org/logo.png){width="15%"} ![](https://allisonhorst.github.io/palmerpenguins/reference/figures/logo.png){width="15%"}
+

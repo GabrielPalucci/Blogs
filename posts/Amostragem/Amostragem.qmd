@@ -32,6 +32,7 @@ Assim, existe dois efeitos improtantes que serão descutidos nesse tópico
 
 ```{r, warning=FALSE}
 
+library(ggthemes)
 library(tidyverse)
 library(moderndive)
 ```
@@ -127,9 +128,12 @@ virtual_prop_red_100 <- virtual_samples_100 %>%
   mutate(prop_red = red / 100)
 
 # 3.c) Plot distribution via a histogram
-ggplot(virtual_prop_red_100, aes(x = prop_red)) +
+  ggplot(virtual_prop_red_100, aes(x = prop_red)) +
   geom_histogram(binwidth = 0.05, boundary = 0.4, color = "white") +
-  labs(x = "Proportion of 100 balls that were red", title = "100") 
+  labs(x = "Proportion of 100 balls that were red", title = "100") +
+  theme_wsj(color = "FDF1E1")
+
+
 
 
 
