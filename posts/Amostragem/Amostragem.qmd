@@ -15,8 +15,6 @@ categories:
 
 # Introdução
 
-ASDUHDHUASUHDUHASHUDHUASUHDSAUHDUhAS
-
 Uns dos vários desafios na realizar uma pesquisa ciêntifica é planejar e executar, de forma eficiente, o processo de deliamento amostral.Um boa amamostragem permitira, realizar melhor discussão sobre dados coletados. Esse post busco apresentar um pouco sobre o processo de realizar amostragem e os efeitos de realizar poucas repetições ou diferentes tamanho da coleta da amostra.
 
 Antes de utilizar exemplos sobre solo, utilizaremos uma base de dados de bolinhhas vermelhas e brancas. Importante lembrar o processo de amostragem necessita uma repetição para obter uma frequencia de % da ocorrência do do valor.
@@ -69,7 +67,7 @@ virtual_shovel %>%
 
 ```
 
-Nesse exemplo, pegamos nossa base de dados *virtual_shovel* criamos uma variaável Logical utilizando argumento cor é igual a vermelho, posteriormente realizamos summarize da soma dessa nova variável e finalizamos obtendo a proporção de vermelho na amostragem total que é 50.
+Nesse exemplo, pegamos nossa base de dados *virtual_shovel* criamos uma variaável Logical utilizando argumento cor é igual a vermelho, posteriormente realizamos summarize da soma dessa nova variável e finalizamos obtendo a as sdsadsa proporção de vermelho na amostragem total que é 50.
 
 ```{r, warning=FALSE}
 
@@ -85,9 +83,9 @@ Como podemos observar, realizamos uma amostragem de 50 bolinhas 33 vezes e obtem
 
 *O valor do tamanho da amostragem influência na proporção das bolinhas vermelhas?*
 
-*O valor do tamanho da amostragem influência desvio padrão das bolinhas vermelhas?*
+*O valor do tamanho da amostragem influ**nci**a desadsads**asvi**o padrão das bolinhas vermelhas?*
 
-Desde modo iremos realizar amostragem 25,50, 100 bolinhas em 100 repetições e observar a resposta da porcentagem e sua frequencia
+Desde modo iremos realizar amostragem 25,50, 100 bolinhaasdsadasdas em 100 repetições e observar a resposta da porcentagem e sua frequencia
 
 ```{r}
 
