@@ -1,0 +1,57 @@
+---
+title: "Edaphic gradient shapes the structure and composition of vegetation in the forest-cerrado ecotone in north of minas gerais, Brazil"
+container-title: "Brazilian Journal of Botany"
+title-block-banner: cat.jpg
+title-block-banner-color: "black"
+comments: false
+date: 06-26-2024
+categories:
+ - Community composition
+ - Geoenvironmental gradient
+ - Serra da Tenda
+ - Soil-vegetation relationship
+
+author:
+  - name: Aline Parreira de Souza
+  - name: Guilherme Resende Corrêa
+  - name: Daniel Meira Arruda
+  - name: Rúbia Santos Fonseca
+  - name: Hugo Galvão Cândido 
+  - name: <b>Gabriel Palucci Rosa</b>
+  - name: Viviane Arantes Koch
+  - name: Ana Paula Dechen Rodrigues
+  - name: Márcio Venícius Barbosa Xavier
+---
+
+Brazilian Journal of Botany
+
+```{=html}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ykDXAzs5wu0ZOv5k+udLh9wi+doaRnXQqM9INNIXHjg5aB6QCEXrOM8kqVOEbc4M" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Link com Ícone</title>
+</head>
+<body>
+
+<!-- Link com Ícone e Estilo de Botão -->
+<a href= "https://doi.org/10.1007/s40415-024-01036-5" class="btn btn-secondary text-capitalize" target="_blank">
+    <!-- Ícone de Arquivo de Texto Rico -->
+    <i class="bi bi-file-richtext-fill me-1"></i>
+    <!-- Texto do Link -->
+    Publication
+</a>
+
+<!-- Scripts do Bootstrap (para o estilo) e Bootstrap Icons -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ZJJfbfDR1P7e6LqfymWd8FD5SOQsUt5a9L7eC5JR09v8O2tufhmD9L9Ljvp1G5s" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.17.0/dist/svg/bootstrap-icons.svg"></script>
+
+</body>
+```
+
+## Abstract
+
+```{=html}
+     <style>         body {             text-align: justify;                    }     </style> <body>     <p>Understanding the role of soil as a determinant for the selection and establishment of plant species is important, especially in ecotones. Our objective was to explore the composition and structure of various plant communities and their correlation with soil characteristics across the geoenvironmental gradient of Serra da Tenda in Montes Claros, Minas Gerais. To this end, we established three plots (20 × 20 m) across six distinct geoenvironments: Dry Forest in Lowland on Eutrophic Ferralsol, Limestone Pavement with Cambisol, Dry Forest on Limestone with Nitosol, Dry Forest on Drainageway with Nitosol, Cerrado on Side Slope with Cambisol, and Dense Cerrado in Plateau with Ferralsol. We conducted comprehensive chemical and physical analyses of soil samples collected from these sites. We sampled 877 individuals, encompassing 111 species, 76 genera, and 30 families, with the Fabaceae family exhibiting the most significant species richness. The analysis of community composition, relative abundance values, and soil attributes revealed marked differences across the geoenvironments. Canonical Correspondence Analysis (CCA) further demonstrated that soil physicochemical properties significantly influence floristic composition. Our findings underscore the critical role of soil characteristics as fine-scale determinants of plant community composition within the ecotonal landscapes of northern Minas Gerais, highlighting the intricate interplay between soil properties and vegetation patterns in these biologically diverse ecotone zones.</p> </body>
+```

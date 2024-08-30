@@ -130,5 +130,8 @@
   },
   "posts/Tidy/tidyverse.rmarkdown": {
     "tidyverse.html": "c7b99c3f"
+  },
+  "publication/MataSeca.qmd": {
+    "MataSeca.html": "32316a56"
   }
 }
